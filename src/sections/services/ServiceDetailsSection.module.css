@@ -1,0 +1,187 @@
+.section {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.sectionAlt {
+  background-color: var(--bg-light);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.iconWrapper {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(13, 166, 242, 0.1);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-text);
+}
+
+.iconWrapper .icon {
+  font-size: 1.875rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--slate-900);
+}
+
+.desc {
+  font-size: 1.125rem;
+  color: var(--slate-600);
+  line-height: 1.6;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--slate-700);
+}
+
+.listIcon {
+  color: var(--primary-text);
+  font-size: 1.25rem;
+}
+
+.imagesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.imgPanel {
+  height: 20rem;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-2xl);
+}
+
+.imgPanelOffset {
+  margin-top: 3rem;
+}
+
+.imgSingle {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-2xl);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.featureBox {
+  padding: 1rem;
+  background-color: var(--bg-light);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--slate-200);
+}
+
+.featureTitle {
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 0.25rem;
+}
+
+.featureDesc {
+  font-size: 0.875rem;
+  color: var(--slate-500);
+}
+
+.banner {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  min-height: 31.25rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bannerBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 10;
+  padding: 2rem;
+  color: var(--white);
+  max-width: 48rem;
+}
+
+@media (min-width: 768px) {
+  .bannerContent {
+    padding: 4rem;
+  }
+}
+
+.bannerBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.bannerBadgeText {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bannerTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.bannerDesc {
+  font-size: 1.125rem;
+  color: var(--slate-300);
+  line-height: 1.6;
+}
+
+/* Order utilities for alternating layout on desktop */
+@media (min-width: 1024px) {
+  .order1 { order: 1; }
+  .order2 { order: 2; }
+}

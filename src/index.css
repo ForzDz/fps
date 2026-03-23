@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Stripe-like electric accent */
+  --primary: #00e5ff;
+  --primary-hover: #00c7e0;
+  --primary-text: #007a99; /* Passes WCAG AA 4.5:1 on light backgrounds */
+  --bg-light: #f5f7f8;
+  --bg-dark: #0a0a0a;
+  --bg-charcoal: #0a0a0a;
+
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  --white: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-dark-bg: rgba(10, 10, 10, 0.55);
+  --glass-dark-border: rgba(255, 255, 255, 0.10);
+
+  --font-display: 'Inter', sans-serif;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  --max-width: 80rem;
+  /* 1280px */
+  --nav-height: 80px;
+  --hero-gap: 13rem;
+  /* Desktop gap below navbar */
+}
+
+@media (max-width: 767px) {
+  :root {
+    --hero-gap: 9rem;
+    /* Mobile gap below navbar */
+  }
+}
+
+/* Base Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg-light);
+  color: var(--slate-900);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Premium Typography Adjustments */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--slate-900);
+  margin-top: 0;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.text-primary {
+  color: var(--primary-text);
+}
+
+.text-slate-900 {
+  color: var(--slate-900);
+}
+
+.text-slate-600 {
+  color: var(--slate-600);
+}
+
+.text-slate-500 {
+  color: var(--slate-500);
+}
+
+.text-slate-400 {
+  color: var(--slate-400);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-slate-50 {
+  background-color: var(--slate-50);
+}
+
+.bg-slate-900 {
+  background-color: var(--slate-900);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #0a1628;
+  box-shadow: 0 4px 14px 0 rgba(13, 166, 242, 0.39);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px -5px rgba(13, 166, 242, 0.5);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--slate-200);
+  color: var(--slate-900);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: #0a1628;
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px -5px rgba(13, 166, 242, 0.3);
+}
+
+/* Icons */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Layout Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* Glassmorphism */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* Typography */
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Effects */
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   GLOBAL MOBILE RESPONSIVE OVERRIDES
+   Only affects screens < 768px — zero impact on desktop
+   ========================================================= */
+
+/* ── Spacing & layout ────────────────────────────────────── */
+@media (max-width: 767px) {
+
+  /* Prevent any horizontal overflow globally */
+  *,
+  *::before,
+  *::after {
+    max-width: 100%;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Tighter container padding on mobile */
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Section padding: reduce vertical breathing room */
+  section:not(:first-of-type) {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  /* ── Typography ───────────────────────────────────────── */
+  h1 {
+    font-size: clamp(1.85rem, 7vw, 2.5rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 5vw, 1.4rem) !important;
+  }
+
+  p {
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+  }
+
+  /* ── Images ───────────────────────────────────────────── */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ── Buttons — ensure 44px min touch target ───────────── */
+  .btn,
+  button,
+  [role="button"],
+  a[class*="btn"] {
+    min-height: 44px;
+  }
+
+  /* ── Grid fixes ───────────────────────────────────────── */
+  [class*="grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+}
+
+/* ── Specific page-level section padding fix ─────────────── */
+@media (max-width: 767px) {
+
+  /* Hero sections (usually the first section in main) */
+  section:first-of-type {
+    min-height: unset !important;
+    /* Standardized space below fixed navbar */
+    padding-top: calc(var(--nav-height) + var(--hero-gap)) !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Cards and panels */
+  [class*="card"],
+  [class*="Card"] {
+    padding: 1.25rem !important;
+  }
+
+  /* Stats bars */
+  [class*="stats"],
+  [class*="Stats"] {
+    gap: 1rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Action button rows */
+  [class*="actions"],
+  [class*="Actions"] {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
+
+  [class*="actions"] a,
+  [class*="actions"] button,
+  [class*="Actions"] a,
+  [class*="Actions"] button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Image wrappers */
+  [class*="imageWrapper"],
+  [class*="imgWrapper"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Floating elements — hide on mobile to avoid layout issues */
+  [class*="floatingTag"],
+  [class*="floatingBadge"] {
+    display: none !important;
+  }
+
+}
+
+/* =========================================================
+   GLOBAL MICRO-INTERACTIONS & PREMIUM POLISH
+   Applies on all screen sizes — no layout changes
+   ========================================================= */
+
+/* ── Button micro-interactions ───────────────────────────── */
+/* Generic .btn enhancement (supplements existing rules) */
+.btn {
+  will-change: transform, box-shadow;
+}
+
+.btn-primary {
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.025);
+  box-shadow: 0 8px 28px -4px rgba(13, 166, 242, 0.55),
+    0 2px 6px rgba(13, 166, 242, 0.2);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: 0.1s;
+}
+
+.btn-outline {
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease;
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: 0.1s;
+}
+
+/* ── Card lift ───────────────────────────────────────────── */
+/* Applied via attribute selector — works with any CSS module card */
+[class*="card"],
+[class*="Card"] {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+[class*="card"]:hover,
+[class*="Card"]:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.14),
+    0 4px 12px -2px rgba(15, 23, 42, 0.06);
+}
+
+/* ── Image zoom on hover ─────────────────────────────────── */
+/* Scoped to image containers only — doesn't affect content wrappers */
+[class*="imageContainer"] img,
+[class*="imgContainer"] img {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.02);
+}
+
+[class*="imageContainer"]:hover img,
+[class*="imgContainer"]:hover img {
+  transform: scale(1.07);
+}
+
+/* ── Section spacing refinements ─────────────────────────── */
+section {
+  /* Slightly more air on desktop */
+  scroll-margin-top: 90px;
+  /* offset for fixed navbar */
+}
+
+/* ── Typography polish ───────────────────────────────────── */
+/* Applied globally — improves render quality */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Slightly tighter letter spacing on large headings */
+h2 {
+  letter-spacing: -0.028em;
+  line-height: 1.15;
+}
+
+h3 {
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+/* Better paragraph flow */
+p {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── Subtle section separator gradient ───────────────────── */
+/* Add a very faint top gradient to alternating light sections */
+section[class*="alt"],
+section[class*="Alt"],
+section[class*="features"],
+section[class*="Features"] {
+  background: linear-gradient(180deg, rgba(248, 250, 255, 0) 0%, rgba(240, 247, 255, 0.6) 100%);
+}
+
+/* ── Focus visible — keyboard accessibility ──────────────── */
+:focus-visible {
+  outline: 2px solid var(--primary, #0da6f2);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Smooth image rendering ──────────────────────────────── */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Reduced motion — respect user preference ────────────── */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

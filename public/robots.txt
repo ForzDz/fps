@@ -1,0 +1,25 @@
+# robots.txt — Ferdjioua Plastique
+# https://www.robotstxt.org/robotstxt.html
+#
+# S’applique à tous les crawlers (Googlebot, Bingbot, Googlebot-Image, DuckDuckBot,
+# YandexBot, Baiduspider, Slurp, LinkedInBot, facebookexternalhit, etc.).
+
+User-agent: *
+Allow: /
+
+# Chemins réservés (admin, compte, API, fichiers temporaires) — à adapter si vous ajoutez ces routes
+Disallow: /admin
+Disallow: /admin/
+Disallow: /private
+Disallow: /private/
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+# Éviter l’indexation d’URLs avec paramètres de session si elles apparaissent
+Disallow: /*?*session=
+Disallow: /*?*sid=
+
+Sitemap: https://ferdjiouaplast.dz/sitemap.xml
