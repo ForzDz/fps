@@ -15,7 +15,7 @@ const Home = () => {
       <Seo
         path="/"
         title="Ferdjioua Plastique | Fabrication plastique et services — Ferdjioua, Mila"
-        description="Ferdjioua Plastique : préformes PET, emballage industriel et injection plastique sur mesure à Ferdjioua, Mila, Algérie. Qualité certifiée depuis 1998."
+        description="Ferdjioua Plastique : préformes PET, emballage industriel et injection plastique sur mesure à Ferdjioua, Mila, Algérie. Qualité certifiée depuis 2019."
         keywords="Ferdjioua Plastique, fabrication plastique Algérie, préformes PET, injection plastique Mila, emballage industriel, Sarl Ferdjioua, Ferdjioua Mila, plastique industrielle"
       />
       <HeroSection />

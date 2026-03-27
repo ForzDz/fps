@@ -13,7 +13,7 @@ const AboutHeroSection = () => {
         <div className={styles.content}>
           <h1 className={styles.title}>
             L’excellence du plastique <br/>
-            <span className={styles.highlight}>Depuis 1998</span>
+            <span className={styles.highlight}>Depuis 2019</span>
           </h1>
           <p className={styles.desc}>
             Un héritage fondé sur l’ingénierie de précision, l’innovation durable et un engagement constant pour la qualité industrielle.

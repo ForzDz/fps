@@ -72,7 +72,7 @@ const HeroSection = () => {
               <span className={styles.ping} />
               <span className={styles.pingDot} />
             </span>
-            Standards qualité internationaux — Depuis 1998
+            Standards qualité internationaux — Depuis 2019
           </motion.div>
 
           {/* Headline with animated word */}

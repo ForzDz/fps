@@ -23,7 +23,7 @@ export const COMPANY = {
   industry: 'Fabrication plastique et services',
   /** Secteur pour JSON-LD (anglais, demande SEO local) */
   industryEn: 'Plastics manufacturing',
-  foundingYear: '1998',
+  foundingYear: '2019',
 } as const;
 
 type BreadcrumbEntry = { name: string; path: string };

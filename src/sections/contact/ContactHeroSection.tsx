@@ -2,6 +2,7 @@ import styles from './ContactHeroSection.module.css';
 import { motion } from 'framer-motion';
 import { StaggerContainer, StaggerItem } from '../../components/ScrollReveal';
 import MagneticButton from '../../components/MagneticButton';
+import img6 from '../../assets/img6.jpeg';
 
 const ContactHeroSection = () => {
   return (
@@ -9,7 +10,7 @@ const ContactHeroSection = () => {
       <div className={styles.bg}>
         <div className={styles.gradient}></div>
         <img 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYNuosLlEye3hTbskVR94z-kaxBWm3hJ4xvn1-Jcmvz_LslooKRjca0frmVRHkyj0IkVIvKylocNwtoOA0GdCV3iqrk2nuv5PWGrbswdoPsW9EYx8iuY_wKHHasOBtaPH_JCELw3ydmpS72FEt6FNfO1vHKN7sm-JJsYU3p9qH8vxRu5eSkjisO9Pjr481R0s2_0jr49UFCLkzteUmXv6NcJ_YVdzfi1_3jl94BetiESzOdwuPHJwK9Tb5hD-lvC8xyzmnnuuoVT1U" 
+          src={img6} 
           alt="Contact Ferdjioua Plastique — installation industrielle et fabrication plastique, Ferdjioua, Mila"
           className={styles.image} 
         />

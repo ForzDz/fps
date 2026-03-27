@@ -14,7 +14,7 @@ const OurStorySection = () => {
               
               <div className={styles.textBlock}>
                 <p>
-                  Sarl Ferdjioua Plastique et Services est née d’une vision : transformer le marché local du plastique. Partie d’un atelier modeste en 1998, l’entreprise est devenue un acteur national des solutions plastiques haute performance, au service de secteurs allant de l’emballage alimentaire à l’industrie lourde.
+                  Sarl Ferdjioua Plastique et Services est née d’une vision : transformer le marché local du plastique. Partie d’un atelier modeste en 2019, l’entreprise est devenue un acteur national des solutions plastiques haute performance, au service de secteurs allant de l’emballage alimentaire à l’industrie lourde.
                 </p>
                 <p>
                   Notre croissance s’appuie sur une conviction : la qualité n’est pas une destination, mais une exigence continue. En investissant dans les technologies européennes les plus récentes et en cultivant l’excellence technique, nous livrons des produits conformes aux standards les plus stricts.

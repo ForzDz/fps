@@ -16,7 +16,7 @@ const About = () => {
       <Seo
         path="/about"
         title="À propos | Ferdjioua Plastique — Histoire, valeurs et équipe"
-        description="Découvrez Ferdjioua Plastique : histoire industrielle, valeurs, installations à Ferdjioua (Mila) et engagement qualité depuis 1998."
+        description="Découvrez Ferdjioua Plastique : histoire industrielle, valeurs, installations à Ferdjioua (Mila) et engagement qualité depuis 2019."
         keywords="à propos Ferdjioua Plastique, entreprise plastique Algérie, valeurs industrielles, équipe fabrication plastique, Mila Ferdjioua"
       />
       <AboutHeroSection />
